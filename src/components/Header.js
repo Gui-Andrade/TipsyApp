@@ -1,34 +1,67 @@
 import React from 'react';
 import { Link } from 'react-router';
 
-const Header = (props) => {
-  return (
-    <header className="mainHeader">
+class Header extends React.Component{
 
-      <div className="nav-hamburger icon-menu"></div>
+  componentDidMount(){
+    const hamburger = document.querySelector('.nav-hamburger');
+    const menu = document.querySelector('.mainHeader nav');
 
-      <nav>
-        <ul>
-          <li>About</li>
-          <li>Calculate</li>
-          <li>Contact</li>
-        </ul>
-      </nav>
+    hamburger.addEventListener('click', function(){
+        menu.classList.toggle('visible');
+        console.log('clicked hamburger');
+    });
+  }
 
-      <h1>
-        <Link to="/">
-          <img src="/images/tipsy-logo.png" alt="" />
-        </Link>
-      </h1>
+  render(){
 
-      <h3 className="tagline">
-        <span>
-          { props.tagline }
-        </span>
-      </h3>
+    const props = {...this.props}
 
-    </header>
-  )
+    return (
+      <header className="mainHeader">
+
+        <div className="nav-hamburger icon-menu"></div>
+
+        <nav>
+          <ul>
+            <li>
+              <Link to="/about/">
+                About
+              </Link>
+            </li>
+            <li>
+              <Link to="/">
+                Calculate
+              </Link>
+            </li>
+            <li>
+              <Link to="/pasttips/">
+                Past Tips
+              </Link>
+            </li>
+            <li>
+              <Link to="/contact/">
+                Contact
+              </Link>
+            </li>
+          </ul>
+        </nav>
+
+        <h1>
+          <Link to="/">
+            <img src="/images/tipsy-logo.png" alt="" />
+          </Link>
+        </h1>
+
+        <h3 className="tagline">
+          <span>
+            { props.tagline }
+          </span>
+        </h3>
+
+      </header>
+    )
+  }
 }
 
 Header.propTypes = {

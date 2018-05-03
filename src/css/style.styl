@@ -21,6 +21,11 @@ main
 .internal
     text-align: left
 
+@keyframes fadein {
+  from { opacity: 0; scale: 0.5; }
+  to   { opacity: 1; scale:1; }
+}
+
 #about
   blockquote
     font-size: 0.9em
@@ -84,21 +89,28 @@ header.mainHeader
         margin-bottom: 0.3em
         border-bottom: 3px solid #fff
 
-  nav
-    display: none
-    ul
-      display: flex
-      flex-direction: column
-      li
-        padding: 1em 0
-        font-size: 1.2em
-        border-bottom: 1px solid #fff
+    nav
+      animation: fadein 1.5s;
+      display: none
+      &.visible
+        display: block
+      ul
+        display: flex
+        flex-direction: column
+        li
+          flex: 1
+
+          flex-direction: column
+          padding: 1em 0
+          font-size: 1.2em
+          border-bottom: 1px solid #fff
+        a
+          text-decoration: none
+          color: white
 
   .flex-container
     display: flex
     flex-direction: column
-
-
 
 /// Medium devices (tablets, 768px and up)
 // @media (min-width: 768px)
