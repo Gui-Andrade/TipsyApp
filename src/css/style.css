@@ -496,6 +496,25 @@ main {
   max-width: 90%;
   text-align: center;
 }
+.internal {
+  text-align: left;
+}
+#about blockquote {
+  font-size: 0.9em;
+  display: block;
+  margin-top: 1em;
+  color: #808080;
+}
+#about h2 span {
+  display: inline;
+}
+#about span {
+  font-style: italic;
+  font-weight: bold;
+  display: block;
+  font-size: 0.8em;
+  color: #fff;
+}
 header.mainHeader nav {
   margin-bottom: 2em;
 }
