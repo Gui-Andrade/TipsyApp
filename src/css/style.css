@@ -95,8 +95,8 @@
 }
 .flex-container label.css-label .select {
   position: relative;
-  display: block;
-  margin: 0 auto;
+  display: -ms-flexbox;
+  display: flex;
   width: 100%;
   max-width: 325px;
   vertical-align: middle;
@@ -177,7 +177,7 @@
   height: 100%;
   border-bottom: 0px;
   border-radius: 3px;
-  font-size: 12px;
+  font-size: 1em;
   box-shadow: 0px 1em 2em -1.5em rgba(0,0,0,0.5);
 }
 .flex-container .select >i.toggle {
@@ -265,7 +265,7 @@
   display: block;
   z-index: 3;
   top: 0px;
-  font-size: 12px;
+  font-size: 1em;
   background: #fff;
   border-top: 0px;
   box-shadow: none;
@@ -280,19 +280,34 @@
   background: none;
   cursor: no-drop;
 }
+#tipSubmit {
+  padding: 1em;
+  -ms-flex: 1;
+      flex: 1;
+  width: 100%;
+  margin-top: 2em;
+  -ms-flex-item-align: start;
+      align-self: flex-start;
+  background: #ffd700;
+}
 #serviceSelect {
   display: -ms-flexbox;
   display: flex;
 }
-#serviceSelect .button-big {
+#serviceSelect a {
+  padding: 1em;
   -ms-flex: 1;
       flex: 1;
   margin: 0.2em;
   margin-bottom: 2em;
   -ms-flex-item-align: start;
       align-self: flex-start;
-  padding: 1em;
   background: #ffd700;
+  border: 2px solid #ffd700;
+}
+#serviceSelect a.active {
+  border: 2px solid #fff;
+  font-weight: bold;
 }
 article,
 aside,
