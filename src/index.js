@@ -6,6 +6,7 @@ import './css/style.css';
 
 import App from './components/App';
 import About from './components/About';
+import SharedBill from './components/SharedBill';
 import NotFound from './components/NotFound';
 
 const Root = () => {
@@ -14,6 +15,7 @@ const Root = () => {
       <div>
         <Match exactly pattern="/" component={App} />
         <Match exactly pattern="/about/" component={About} />
+        <Match exactly pattern="/shared/" component={SharedBill} />
         <Miss component={NotFound} />
       </div>
     </BrowserRouter>
