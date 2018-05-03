@@ -1,0 +1,95 @@
+// Import all partials
+@require './_*.styl'
+
+@import 'https://cdnjs.cloudflare.com/ajax/libs/simple-line-icons/2.3.2/css/simple-line-icons.min.css';
+
+
+body
+  // background: rgb(131, 179, 214)
+  background-image: url('/images/bubble.jpg')
+  background-repeat: no-repeat
+  background-position: top left
+  background-size: auto
+  color: white
+
+
+main
+  margin: 0 auto
+  max-width: 90%
+  text-align: center
+
+header.mainHeader
+
+  nav
+    margin-bottom: 2em
+
+  ul
+    margin: 0
+    padding: 0
+    display: flex
+    flex-direction: row
+
+    li
+      flex: 1
+      list-style: none
+
+
+
+  h1
+    font-size 5rem
+    img
+      width: 30%
+
+  h3
+    margin 0
+    font-size 2rem
+    position relative
+    display inline-block
+
+// Small devices (phones, 576px and up)
+@media (max-width: 576px)
+
+  header.mainHeader
+    padding-top: 2em
+    margin-bottom: 3em
+
+    .nav-hamburger
+      width: 1.4em
+      position absolute
+      top: 1.5em
+      right: 1.8em
+      cursor: pointer;
+      .hamb
+        display: block
+        width: 1.4em
+        margin-bottom: 0.3em
+        border-bottom: 3px solid #fff
+
+  nav
+    display: none
+    ul
+      display: flex
+      flex-direction: column
+      li
+        padding: 1em 0
+        font-size: 1.2em
+        border-bottom: 1px solid #fff
+
+  .flex-container
+    display: flex
+    flex-direction: column
+
+
+
+/// Medium devices (tablets, 768px and up)
+// @media (min-width: 768px)
+
+
+
+// Large devices (desktops, 992px and up)
+// @media (min-width: 992px)
+
+
+
+// Extra large devices (large desktops, 1200px and up)
+// @media (min-width: 1200px)

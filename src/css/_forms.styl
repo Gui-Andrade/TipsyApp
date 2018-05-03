@@ -1,0 +1,251 @@
+.flex-container
+  input
+    border: 0
+    border-radius: 10px
+    padding: 1em
+  input, select, button
+    margin-top: 1em
+    flex: 1
+    flex-direction: column
+    flex-flow: wrap
+    align-items: stretch
+
+  input[type=checkbox].css-checkbox
+    position:absolute
+    overflow: hidden
+    clip: rect(0 0 0 0)
+    height:1px
+    width:1px
+    padding:0
+    border:0
+
+  input[type=checkbox].css-checkbox + label.css-label
+    align-items: flex-start
+    margin-top: 1em
+    padding-left:35px
+    height:30px
+    display:inline-block
+    line-height:30px
+    background-repeat:no-repeat
+    background-position: 0 0
+    font-size: 20px
+    vertical-align:middle
+    cursor:pointer
+
+  input[type=checkbox].css-checkbox:checked + label.css-label
+    background-position: 0 -30px
+
+  label.css-label
+    background-image:url('/images/checkbox.png')
+    -webkit-touch-callout: none
+    -webkit-user-select: none
+    -khtml-user-select: none
+    -moz-user-select: none
+    -ms-user-select: none
+    user-select: none
+    text-align: left
+
+
+
+
+
+
+
+
+    .select
+      position: relative
+      display: block
+      margin: 0 auto
+      width: 100%
+      max-width: 325px
+
+      vertical-align: middle
+      text-align: left
+      user-select: none
+      -webkit-touch-callout: none
+
+      .placeholder
+        position: relative
+        display: block
+        background-color: #393d41
+        z-index: 1
+        padding: 1em
+        border-radius: 2px
+        cursor: pointer
+
+        &:hover
+          background: darken(#393d41,2%)
+
+
+        &:after
+          position: absolute
+          right: 1em
+          top: 50%
+          transform: translateY(-50%)
+          font-family: 'FontAwesome'
+          content: '\f078'
+          z-index: 10
+
+      &.is-open
+        .placeholder:after
+          content: '\f077'
+
+        ul
+          display: block
+
+      &.select--white
+        .placeholder
+          background: #fff
+          color: #999
+          &:hover
+            background: darken(#fff,2%)
+
+      ul
+        display: none
+        position: absolute
+        overflow: hidden
+        overflow-y: auto
+        width: 100%
+        background: #fff
+        border-radius: 2px
+        top: 100%
+        left: 0
+        list-style: none
+        margin: 5px 0 0 0
+        padding: 0
+        z-index: 100
+        max-height: 120px
+
+        li
+          display: block
+          text-align: left
+          padding: 0.8em 1em 0.8em 1em
+          color: #999
+          cursor: pointer
+
+          &:hover
+            background: #4ebbf0
+            color: #fff
+
+
+
+  .select
+    margin-top: 2em
+    position: relative;
+    overflow: hidden;
+    display: block;
+    width: 330px;
+    height: 100%;
+    border-bottom: 0px;
+    border-radius: 3px;
+    font-size: 12px;
+    box-shadow: 0px 1em 2em -1.5em rgba(0, 0, 0, .5);
+    >i.toggle
+        position: absolute;
+        z-index: 4;
+        right: 1.5em;
+        top: 1.6em;
+        color: #ccc
+
+    .title,
+    .placeholder
+        position: relative;
+        color: #ccc
+        display: block;
+        width: 100%;
+        height: 100%;
+        padding: 1.5em 2em;
+        background: white
+        border-top: 1px solid rgba(0, 0, 0, .05);
+        cursor: pointer;
+
+    &>input
+        position: absolute;
+        left: 0px;
+        top: 0px;
+        z-index: 1;
+        width: 100%;
+        height: 100%;
+        display: block;
+        opacity: 0;
+        cursor: pointer;
+        &:checked
+            ~i.toggle.icon-arrow-down
+                display: none;
+
+            ~i.toggle.icon-arrow-up
+                display: block;
+
+            div.options label.option .title
+                display: none!important;
+
+
+        &:not(:checked)
+            z-index: 4;
+            ~label.option
+                >span.title
+                    display: none;
+
+
+            ~i.toggle.icon-arrow-up
+                display: none;
+
+            ~i.toggle.icon-arrow-down
+                display: block;
+
+
+        &:disabled
+            cursor: no-drop;
+
+
+    &>span.placeholder
+        position: relative;
+        z-index: 0;
+        display: inline-block;
+        width: 100%;
+        color: #999;
+        border-top: 0px;
+
+    label.option
+        display: block;
+        overflow: hidden;
+        z-index: 1;
+        width: 100%;
+        transition: all 1s ease-out;
+        span.title
+            position: relative;
+            z-index: 2;
+            transition: background .3s ease-out;
+
+            &:hover
+                box-shadow: inset 0px 1px 0px rgba(0, 0, 0, .1);
+
+
+        input
+            display: none;
+            &:checked~span.title
+                position: absolute;
+                display: block;
+                z-index: 3;
+                top: 0px;
+                font-size: 12px;
+                background: #fff;
+                border-top: 0px;
+                box-shadow: none;
+
+                width: 100%;
+
+            &:disabled
+                &~span.title
+                    background: #f9f9f9!important;
+                    color: #aaa;
+                    &:hover
+                        color: #aaa;
+                        background: none;
+                        cursor: no-drop;
+
+
+
+
+
+ // Pure css select 2 TOGGLE
