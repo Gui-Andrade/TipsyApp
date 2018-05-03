@@ -1,14 +1,11 @@
 import React from 'react';
+import { Link } from 'react-router';
 
 const Header = (props) => {
   return (
     <header className="mainHeader">
 
-      <div className="nav-hamburger">
-        <span className="hamb"></span>
-        <span className="hamb"></span>
-        <span className="hamb"></span>
-      </div>
+      <div className="nav-hamburger icon-menu"></div>
 
       <nav>
         <ul>
@@ -19,7 +16,9 @@ const Header = (props) => {
       </nav>
 
       <h1>
-        <img src="/images/tipsy-logo.png" alt="" />
+        <Link to="/">
+          <img src="/images/tipsy-logo.png" alt="" />
+        </Link>
       </h1>
 
       <h3 className="tagline">
