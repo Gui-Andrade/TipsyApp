@@ -38,12 +38,17 @@
   transform: translateY(-100%);
 }
 @import url("https://fonts.googleapis.com/css?family=Roboto+Condensed");
+.flex-container {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-direction: column;
+      flex-direction: column;
+}
 .flex-container input {
   border: 0;
   border-radius: 10px;
   padding: 1em;
 }
-.flex-container input,
 .flex-container select,
 .flex-container button {
   margin-top: 1em;
@@ -280,6 +285,71 @@
   background: none;
   cursor: no-drop;
 }
+.flex-container .bill-forms {
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -ms-flex-direction: row;
+      flex-direction: row;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  padding: 0;
+  margin: 0;
+}
+.flex-container .bill-forms li {
+  font-size: 1.5em;
+  width: 47%;
+  list-style: none;
+}
+.flex-container .bill-forms li input {
+  font-size: 0.8em;
+  width: 80%;
+}
+.flex-container #billTotal {
+  margin-left: 0.2em;
+}
+.flex-container #billTip {
+  margin-right: 0.2em;
+}
+.flex-container #totalPlusTips.active {
+  -ms-flex: 1;
+      flex: 1;
+  background: #036;
+  line-height: 1em;
+  font-size: 1.2em;
+  font-weight: bold;
+  margin-top: 1em;
+}
+.flex-container #totalPlusTips div {
+  border-top: 1px solid #fff;
+  padding-top: 0.2em;
+  font-size: 2em;
+  margin-bottom: 0.2em;
+  list-style: none;
+  color: #ffd700;
+}
+.flex-container div#totalToPayEach {
+  font-size: 1.6em;
+  line-height: 1.2em;
+}
+.flex-container div#totalToPay {
+  font-size: 1.6em;
+  line-height: 1.2em;
+}
+.flex-container .people li {
+  width: 100%;
+}
+.flex-container .people li label {
+  margin: 1em 0 0.5em 0;
+  display: block;
+}
+.flex-container .people li input {
+  display: block;
+  margin: 0 auto;
+  width: 40%;
+}
+.flex-container #tipSubmit {
+  margin-bottom: 2em;
+}
 #tipSubmit {
   padding: 1em;
   -ms-flex: 1;
@@ -296,6 +366,8 @@
 }
 #serviceSelect a {
   padding: 1em;
+  text-decoration: none;
+  color: #505153;
   -ms-flex: 1;
       flex: 1;
   margin: 0.2em;
@@ -500,10 +572,7 @@ h3 {
 }
 @import 'https://cdnjs.cloudflare.com/ajax/libs/simple-line-icons/2.3.2/css/simple-line-icons.min.css';
 body {
-  background-image: url("/images/bubble.jpg");
-  background-repeat: no-repeat;
-  background-position: top left;
-  background-size: auto;
+  background: #369;
   color: #fff;
 }
 main {
@@ -530,6 +599,16 @@ main {
   font-size: 0.8em;
   color: #fff;
 }
+#about p {
+  font-size: 1.2em;
+}
+#about p span {
+  font-weight: normal;
+  font-size: 1.2em;
+  font-style: normal;
+  display: inline;
+  margin-right: 0.5em;
+}
 header.mainHeader nav {
   margin-bottom: 2em;
 }
@@ -552,11 +631,18 @@ header.mainHeader h1 {
 header.mainHeader h1 img {
   width: 30%;
 }
+header.mainHeader h1 span {
+  margin-left: 0.1em;
+}
 header.mainHeader h3 {
   margin: 0;
   font-size: 2rem;
   position: relative;
   display: inline-block;
+}
+iframe {
+  width: 100%;
+  height: 25em;
 }
 @media (max-width: 576px) {
   header.mainHeader {
@@ -588,25 +674,35 @@ header.mainHeader h3 {
     display: flex;
     -ms-flex-direction: column;
         flex-direction: column;
+    margin-top: 2em;
   }
   header.mainHeader nav ul li {
     -ms-flex: 1;
         flex: 1;
     -ms-flex-direction: column;
         flex-direction: column;
-    padding: 1em 0;
+    padding: 0;
     font-size: 1.2em;
     border-bottom: 1px solid #fff;
   }
   header.mainHeader nav ul a {
     text-decoration: none;
     color: #fff;
+    width: 100%;
+    display: block;
+    padding: 1em;
   }
   .flex-container {
     display: -ms-flexbox;
     display: flex;
     -ms-flex-direction: column;
         flex-direction: column;
+  }
+  #tipResult li {
+    width: 90%;
+    margin: 0 auto;
+    text-align: left;
+    line-height: 1.3em;
   }
 }
 @keyframes fadein {

@@ -1,11 +1,60 @@
 import React from 'react';
 import Header from './Header';
-import PercentageForm from './PercentageForm';
 import { Link } from 'react-router';
 class SharedBill extends React.Component{
 
-  render(){
+  componentDidMount(){
 
+    const calculateButton = document.querySelector('#tipSubmit');
+    const totalPlusTips = document.querySelector('#totalPlusTips');
+    const form = document.querySelector('#yourTipForm');
+
+    calculateButton.addEventListener('click', function(){
+
+      let billTotal = document.querySelector('#billTotal').value;
+      let billTip = document.querySelector('#billTip').value;
+      let numberOfPeople = document.querySelector('#numberOfPeople').value;
+
+      billTotal = parseInt(billTotal, 10);
+      billTip = parseInt(billTip, 10);
+      billTip = billTip / 100;
+      numberOfPeople = parseInt(numberOfPeople, 10);
+      const billPlusTip = billTotal + (billTotal * billTip);
+      const total = (billTotal + (billTotal * billTip)) / numberOfPeople;
+
+      totalPlusTips.classList.add('active');
+      if (isNaN(total)) {
+        totalPlusTips.innerHTML = 'Please enter Total, Tips &amp; People!';
+      } else {
+          totalPlusTips.innerHTML =
+          `
+            <ul id="tipResult">
+              <li>
+                Bill: £${billTotal}
+              </li>
+              <li>
+                Tip: ${billTip * 100}%
+              </li>
+              <li>
+                Bill + Tip: £${billPlusTip}
+              </li>
+              <li>
+                People: ${numberOfPeople}
+              </li>
+            </ul>
+            <div id="totalToPayEach">
+              Total each: £${total}
+            </div>
+          `;
+      }
+
+      form.reset();
+
+    });
+
+  }
+
+  render(){
 
 
     return(
@@ -16,23 +65,37 @@ class SharedBill extends React.Component{
         <div id="tipForm">
           <nav id="serviceSelect">
             <Link id="yourTip" className="button-big" to="/">
-              <button type="button" name="button">Your Bill</button>
+              <span className="icon-user"></span> Your Bill
             </Link>
             <Link to="/shared/" id="shareOfBill" className="button-big active">
-              <button type="button" name="button">Shared Bill</button>
+              <span className="icon-people"></span> Shared Bill
             </Link>
           </nav>
 
           <form className="flex-container active" id="yourTipForm" method="post" ref="calculateTipForm">
 
-            <input type="number" name="Total" placeholder="&pound; Total" id="billTotal" />
+              <ul className="flex-container bill-forms">
+                <li>£<input type="number" name="Total" placeholder="Total" ref="billTotal" id="billTotal" /></li>
+                <li><input type="number" name="Tip" placeholder="Tip" ref="billTip" id="billTip" list="defaultNumbers" />%
+                  <datalist id="defaultNumbers">
+                    <option value="5" />
+                    <option value="10" />
+                    <option value="15" />
+                    <option value="20" />
+                  </datalist>
+                </li>
+              </ul>
 
-            <input type="checkbox" name="customTipCheckbox" id="customTipCheckbox" className="css-checkbox" />
-            <label htmlFor="customTipCheckbox" className="css-label">Custom Tip</label>
+              <ul className="flex-container bill-forms people">
+                <li>
+                  <label htmlFor="numberOfPeople"><span className="icon-people"></span> People Sharing</label>
+                  <input type="number" name="numberOfPeople" placeholder="e.g.: 3" ref="numberOfPeople" id="numberOfPeople" /></li>
 
-            <PercentageForm />
+              </ul>
 
-            <button type="button" id="tipSubmit" name="Calculate">Calculate</button>
+              <div id="totalPlusTips"></div>
+
+            <button type="button" id="tipSubmit" name="Calculate"><span className="icon-wallet"></span> Calculate</button>
 
           </form>
         </div>

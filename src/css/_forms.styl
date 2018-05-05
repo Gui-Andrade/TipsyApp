@@ -1,12 +1,14 @@
 
 
 .flex-container
+  display: flex
+  flex-direction: column
 
   input
     border: 0
     border-radius: 10px
     padding: 1em
-  input, select, button
+  select, button
     margin-top: 1em
     flex: 1
     flex-direction: column
@@ -249,6 +251,63 @@
 
 
 
+  .bill-forms
+      display: inline-flex
+      flex-direction: row
 
+      justify-content: space-around;
 
- // Pure css select 2 TOGGLE
+      padding: 0
+      margin: 0
+      li
+        font-size: 1.5em
+        width: 47%
+        list-style: none
+        input
+          font-size: 0.8em
+          width: 80%
+
+  #billTotal
+    margin-left: 0.2em
+
+  #billTip
+    margin-right: 0.2em
+
+  #totalPlusTips
+    &.active
+      flex: 1
+      background: #003366
+      line-height: 1em
+      font-size: 1.2em
+      font-weight: bold
+      margin-top: 1em
+    div
+      border-top: 1px solid white
+      padding-top: 0.2em
+      font-size: 2em
+      margin-bottom: 0.2em
+      list-style: none
+      color: gold
+
+  div#totalToPayEach
+    font-size: 1.6em
+    line-height: 1.2em
+
+  div#totalToPay
+    font-size: 1.6em
+    line-height: 1.2em
+
+  .people
+    li
+      width: 100%
+      label
+        margin: 1em 0 0.5em 0
+        display: block
+      input
+
+        display: block
+        margin: 0 auto
+        width: 40%
+
+  #tipSubmit
+    margin-bottom: 2em
