@@ -1,8 +1,24 @@
 import React from 'react';
 import Header from './Header';
+import pasttips from '../pastTips.js';
+import PastTip from './PastTip';
 
 class PastTips extends React.Component{
 
+  constructor(){
+
+    super();
+
+    this.state = {
+      tips: {}
+    };
+  }
+
+  componentDidMount(){
+
+    this.setState({tips: pasttips})
+
+  }
   render(){
 
     return(
@@ -13,9 +29,11 @@ class PastTips extends React.Component{
 
           <h2>Saved Tips History</h2>
 
-          <p>
-            [ Insert Map here ]
-          </p>
+          <div id="pastTipsResult">
+            {Object.keys(this.state.tips).map(key =>
+              (<PastTip index={key} key={key} tipsData={this.state.tips[key]} />))
+              }
+          </div>
 
         </div>
       </main>
