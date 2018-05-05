@@ -14,12 +14,12 @@ class Contact extends React.Component{
           <h2>Contact</h2>
 
           <p>
-            Email: bla@bla.com
+            <span className="icon-envelope-open"></span> Email: bla@bla.com
           </p>
           <p>
-            Tel: 0709 777 8888
+            <span className="icon-call-out"></span> Tel: 0709 777 8888
           </p>
-          
+
         </div>
       </main>
     )

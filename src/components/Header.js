@@ -9,7 +9,7 @@ class Header extends React.Component{
 
     hamburger.addEventListener('click', function(){
         menu.classList.toggle('visible');
-        console.log('clicked hamburger');
+        hamburger.classList.toggle('icon-close')
     });
   }
 
@@ -26,22 +26,22 @@ class Header extends React.Component{
           <ul>
             <li>
               <Link to="/about/">
-                About
+                <span className="icon-question"></span> About
               </Link>
             </li>
             <li>
               <Link to="/">
-                Calculate
+                <span className="icon-wallet"></span> Calculate
               </Link>
             </li>
             <li>
               <Link to="/pasttips/">
-                Past Tips
+                <span className="icon-location-pin"></span> Past Tips
               </Link>
             </li>
             <li>
               <Link to="/contact/">
-                Contact
+                <span className="icon-call-out"></span> Contact
               </Link>
             </li>
           </ul>
@@ -51,6 +51,7 @@ class Header extends React.Component{
           <Link to="/">
             <img src="/images/tipsy-logo.png" alt="" />
           </Link>
+          <span className="icon-cup"></span>
         </h1>
 
         <h3 className="tagline">
