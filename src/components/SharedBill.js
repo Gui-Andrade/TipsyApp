@@ -60,7 +60,7 @@ class SharedBill extends React.Component{
     return(
       <main>
 
-        <Header tagline="Always pay and tip right" />
+        <Header />
 
         <div id="tipForm">
           <nav id="serviceSelect">

@@ -6,6 +6,7 @@ class PastTip extends React.Component{
     const { tipsData } = this.props;
     return(
     <section>
+
       <h3>Restaurant: {tipsData.restaurant}</h3>
       <time dateTime={tipsData.date}>{tipsData.date}</time>
       <ul>

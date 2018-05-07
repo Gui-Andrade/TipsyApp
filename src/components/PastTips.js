@@ -23,9 +23,10 @@ class PastTips extends React.Component{
 
     return(
       <main>
-        <Header tagline="Always pay and tip right" />
 
-        <div id="about" className="internal">
+        <Header />
+
+        <div className="internal">
 
           <h2>Saved Tips History</h2>
 

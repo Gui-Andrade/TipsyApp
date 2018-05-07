@@ -15,8 +15,6 @@ class Header extends React.Component{
 
   render(){
 
-    const props = {...this.props}
-
     return (
       <header className="mainHeader">
 
@@ -55,9 +53,7 @@ class Header extends React.Component{
         </h1>
 
         <h3 className="tagline">
-          <span>
-            { props.tagline }
-          </span>
+          Always pay and tip right
         </h3>
 
       </header>
@@ -66,7 +62,7 @@ class Header extends React.Component{
 }
 
 Header.propTypes = {
-  tagline: React.PropTypes.string.isRequired
+  // tagline: React.PropTypes.string.isRequired
 }
 
 export default Header;

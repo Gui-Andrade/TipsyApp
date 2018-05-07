@@ -579,40 +579,51 @@ body {
 }
 main {
   margin: 0 auto;
-  max-width: 90%;
+  padding: 0 1rem;
   text-align: center;
 }
 .internal {
   text-align: left;
 }
-#about blockquote {
+#about,
+#contact {
+  background: #fff;
+  color: #333;
+  padding: 1rem;
+}
+#about blockquote,
+#contact blockquote {
   font-size: 0.9em;
   display: block;
   margin-top: 1em;
   color: #808080;
 }
-#about h2 {
+#about h2,
+#contact h2 {
   font-size: 2.5rem;
 }
-#about h2 span {
+#about h2 span,
+#contact h2 span {
   display: inline;
+  color: #a9a9a9;
 }
-#about span {
+#about span,
+#contact span {
   font-style: italic;
   font-weight: bold;
   display: block;
   font-size: 0.8em;
-  color: #fff;
 }
-#about p {
-  font-size: 1.2em;
+#about p,
+#contact p {
+  font-size: 1em;
 }
-#about p span {
+#about p span,
+#contact p span {
   font-weight: normal;
   font-size: 1.2em;
   font-style: normal;
   display: inline;
-  margin-right: 0.5em;
 }
 header.mainHeader h1 {
   font-size: 5rem;
@@ -701,7 +712,7 @@ header.mainHeader nav ul a {
 }
 #pastTipsResult section {
   background: #fff;
-  color: #00008b;
+  color: #333;
   line-height: 0em;
   padding: 1rem;
   margin-bottom: 1rem;

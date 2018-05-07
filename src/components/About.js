@@ -7,7 +7,7 @@ class About extends React.Component{
 
     return(
       <main>
-        <Header tagline="Always pay and tip right" />
+        <Header />
 
         <div id="about" className="internal">
 

@@ -7,9 +7,9 @@ class Contact extends React.Component{
 
     return(
       <main>
-        <Header tagline="Always pay and tip right" />
+        <Header />
 
-        <div id="about" className="internal">
+        <div id="contact" className="internal">
 
           <h2>Contact</h2>
 

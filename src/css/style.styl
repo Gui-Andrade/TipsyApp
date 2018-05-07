@@ -18,7 +18,7 @@ body
 
 main
   margin: 0 auto
-  max-width: 90%
+  padding: 0 1rem
   text-align: center
 
 .internal
@@ -29,7 +29,10 @@ main
   to   { opacity: 1; scale:1; }
 }
 
-#about
+#about, #contact
+  background: white
+  color: #333
+  padding: 1rem
   blockquote
     font-size: 0.9em
     display block
@@ -39,20 +42,20 @@ main
     font-size: 2.5rem
     span
       display: inline
+      color: darkgray
   span
     font-style: italic
     font-weight: bold
     display: block
     font-size: 0.8em
-    color: white
+
   p
-    font-size: 1.2em
+    font-size: 1em
     span
       font-weight: normal
       font-size: 1.2em
       font-style: normal
       display: inline
-      margin-right: 0.5em
 
 header.mainHeader
 
@@ -134,7 +137,7 @@ header.mainHeader
 #pastTipsResult
   section
     background: white
-    color: darkblue
+    color: #333
     line-height: 0em
     padding: 1rem
     margin-bottom: 1rem
