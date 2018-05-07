@@ -50,8 +50,8 @@ class Header extends React.Component{
         <h1>
           <Link to="/">
             <img src="/images/tipsy-logo.png" alt="" />
+            <span className="icon-cup"></span>
           </Link>
-          <span className="icon-cup"></span>
         </h1>
 
         <h3 className="tagline">

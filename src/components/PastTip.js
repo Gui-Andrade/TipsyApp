@@ -3,18 +3,18 @@ import React from 'react';
 class PastTip extends React.Component{
 
   render(){
-    const { tipsData, index } = this.props;
+    const { tipsData } = this.props;
     return(
-    <article>
+    <section>
       <h3>Restaurant: {tipsData.restaurant}</h3>
-      <i>Date: {tipsData.date}</i>
+      <time dateTime={tipsData.date}>{tipsData.date}</time>
       <ul>
         <li>Bill: {tipsData.bill}</li>
         <li>Tip: {tipsData.tip}</li>
         <li>People: {tipsData.people}</li>
         <li>Total Each: {tipsData.totalEach}</li>
       </ul>
-    </article>
+    </section>
     )
   }
 }
