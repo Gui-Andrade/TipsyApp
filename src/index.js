@@ -16,6 +16,7 @@ const Root = () => {
     <BrowserRouter>
       <div>
         <Match exactly pattern="/" component={App} />
+        <Match exactly pattern="/index-offline.html" component={App} />
         <Match exactly pattern="/about/" component={About} />
         <Match exactly pattern="/pasttips/" component={PastTips} />
         <Match exactly pattern="/contact/" component={Contact} />
