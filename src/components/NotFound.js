@@ -1,11 +1,25 @@
 import React from 'react';
+import Header from './Header';
 
 class NotFound extends React.Component {
   render(){
     return (
-      <h1>
-        404 - Page Not Found!
-      </h1>
+      <main>
+        <Header />
+          <h2 className="pnf__header pnf__header-big">
+            <span className="icon-directions"></span> 404 - Page Not Found!
+          </h2>
+          <p>Darn! You seem to be lost.</p>
+          <p>
+            Here's a tip... ;)
+          </p>
+          <p>
+            Please use the menu above to get your bearings or click on the logo to get back to the homepage.
+          </p>
+
+
+      </main>
+
     )
   }
 }

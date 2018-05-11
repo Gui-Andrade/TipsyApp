@@ -727,6 +727,12 @@ header.mainHeader nav ul a {
 #pastTipsResult section time {
   font-size: 1.8rem;
 }
+.pnf__header {
+  margin-bottom: 2em;
+}
+.pnf__header.pnf__header-big {
+  font-size: 1.8em;
+}
 @keyframes fadein {
   from {
     opacity: 0;
