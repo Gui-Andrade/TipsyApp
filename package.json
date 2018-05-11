@@ -5,14 +5,16 @@
   "devDependencies": {
     "autoprefixer-stylus": "0.10.0",
     "babel-eslint": "^7.1.1",
-    "babel-preset-env": "^1.6.1",
+    "babel-preset-env": "^1.7.0",
     "concurrently": "3.0.0",
+    "enzyme": "3.3.0",
+    "enzyme-adapter-react-16": "1.1.1",
     "eslint": "^3.12.2",
-    "eslint-plugin-flowtype": "^2.29.1",
+    "eslint-plugin-flowtype": "^2.46.3",
     "eslint-plugin-jsx-a11y": "^3.0.2",
     "eslint-plugin-react": "^6.8.0",
     "jest": "^22.4.3",
-    "react-scripts": "0.6.1",
+    "react-scripts": "1.1.0",
     "stylus": "0.54.5"
   },
   "dependencies": {
@@ -23,10 +25,14 @@
     "react-dom": "15.3.2",
     "react-router": "4.0.0-alpha.4"
   },
+  "jest": {
+    "setupTestFrameworkScriptFile": "<rootDir>/src/setupTests.js"
+  },
   "scripts": {
     "start": "react-scripts start",
     "watch": "concurrently --names \"webpack, stylus\" --prefix name \"npm run start\" \"npm run styles:watch\"",
     "build": "react-scripts build",
+    "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject",
     "styles": "stylus -u autoprefixer-stylus ./src/css/style.styl -o ./src/css/style.css",
     "styles:watch": "stylus -u autoprefixer-stylus -w ./src/css/style.styl -o ./src/css/style.css"
