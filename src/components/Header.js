@@ -4,8 +4,8 @@ import { Link } from 'react-router';
 class Header extends React.Component{
 
   componentDidMount(){
-    const hamburger = document.querySelector('.mainHeader-hamburger');
-    const menu = document.querySelector('.mainHeader nav');
+    const hamburger = document.querySelector('.MainHeader-Hamburger');
+    const menu = document.querySelector('.MainHeader nav');
 
     hamburger.addEventListener('click', function(){
         menu.classList.toggle('visible');
@@ -16,28 +16,28 @@ class Header extends React.Component{
   render(){
 
     return (
-      <header className="mainHeader">
+      <header className="MainHeader">
 
-        <div className="mainHeader-hamburger icon-menu"></div>
+        <div className="MainHeader-Hamburger icon-menu"></div>
 
-        <nav className="mainHeader-nav">
-          <ul className="mainHeader-menu">
-            <li className="mainHeader-menu-item">
+        <nav className="MainHeader-Nav">
+          <ul className="MainHeader-Menu">
+            <li className="MainHeader-Menu-Item">
               <Link to="/about/">
                 <span className="icon-question"></span> About
               </Link>
             </li>
-            <li className="mainHeader-menu-item">
+            <li className="MainHeader-Menu-Item">
               <Link to="/">
                 <span className="icon-wallet"></span> Calculate
               </Link>
             </li>
-            <li className="mainHeader-menu-item">
+            <li className="MainHeader-Menu-Item">
               <Link to="/pasttips/">
                 <span className="icon-location-pin"></span> Past Tips
               </Link>
             </li>
-            <li className="mainHeader-menu-item">
+            <li className="MainHeader-Menu-Item">
               <Link to="/contact/">
                 <span className="icon-call-out"></span> Contact
               </Link>

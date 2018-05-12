@@ -9,7 +9,7 @@ class Contact extends React.Component{
       <main>
         <Header />
 
-        <div className="contact internal">
+        <div className="Contact internal">
 
           <h2>Contact</h2>
 

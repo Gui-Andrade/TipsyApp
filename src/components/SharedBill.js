@@ -28,7 +28,7 @@ class SharedBill extends React.Component{
       } else {
           totalPlusTips.innerHTML =
           `
-            <ul class="tipResult">
+            <ul class="TipResult">
               <li>
                 Bill: £${billTotal}
               </li>

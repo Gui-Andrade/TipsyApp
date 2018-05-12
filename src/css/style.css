@@ -585,85 +585,85 @@ main {
 .internal {
   text-align: left;
 }
-.about,
-.contact {
+.About,
+.Contact {
   background: #fff;
   color: #333;
   padding: 1rem;
 }
-.about blockquote,
-.contact blockquote {
+.About blockquote,
+.Contact blockquote {
   font-size: 0.9em;
   display: block;
   margin-top: 1em;
   color: #808080;
 }
-.about h2,
-.contact h2 {
+.About h2,
+.Contact h2 {
   font-size: 2.5rem;
 }
-.about h2 span,
-.contact h2 span {
+.About h2 span,
+.Contact h2 span {
   display: inline;
   color: #a9a9a9;
 }
-.about span,
-.contact span {
+.About span,
+.Contact span {
   font-style: italic;
   font-weight: bold;
   display: block;
   font-size: 0.8em;
 }
-.about p,
-.contact p {
+.About p,
+.Contact p {
   font-size: 1em;
 }
-.about p span,
-.contact p span {
+.About p span,
+.Contact p span {
   font-weight: normal;
   font-size: 1.2em;
   font-style: normal;
   display: inline;
 }
-header.mainHeader h1 {
+.MainHeader h1 {
   font-size: 5rem;
 }
-header.mainHeader h1 img {
+.MainHeader h1 img {
   width: 30%;
 }
-header.mainHeader h1 span {
+.MainHeader h1 span {
   margin-left: 0.1em;
   color: #fff;
 }
-header.mainHeader h1 a {
+.MainHeader h1 a {
   text-decoration: none;
 }
-header.mainHeader h3 {
+.MainHeader h3 {
   margin: 0;
   font-size: 2rem;
   position: relative;
   display: inline-block;
 }
-header.mainHeader {
+.MainHeader {
   padding-top: 2em;
   margin-bottom: 3em;
   position: relative;
 }
-header.mainHeader .mainHeader-hamburger {
+.MainHeader .MainHeader-Hamburger {
   width: 1.4em;
   position: absolute;
   top: 2rem;
   right: 0;
   cursor: pointer;
 }
-header.mainHeader .mainHeader-nav {
+.MainHeader .MainHeader-Nav {
   animation: fadein 1.5s;
   display: none;
 }
-header.mainHeader .mainHeader-nav.visible {
+.MainHeader .MainHeader-Nav.visible {
   display: block;
 }
-header.mainHeader .mainHeader-nav .mainHeader-menu {
+.MainHeader .MainHeader-Nav .MainHeader-Menu {
   display: -ms-flexbox;
   display: flex;
   -ms-flex-direction: column;
@@ -671,7 +671,7 @@ header.mainHeader .mainHeader-nav .mainHeader-menu {
   margin: 0 0 5rem 0;
   padding: 0;
 }
-header.mainHeader .mainHeader-nav .mainHeader-menu .mainHeader-menu-item {
+.MainHeader .MainHeader-Nav .MainHeader-Menu .MainHeader-Menu-Item {
   list-style: none;
   -ms-flex: 1;
       flex: 1;
@@ -681,7 +681,7 @@ header.mainHeader .mainHeader-nav .mainHeader-menu .mainHeader-menu-item {
   font-size: 1.2em;
   border-bottom: 1px solid #fff;
 }
-header.mainHeader .mainHeader-nav .mainHeader-menu a {
+.MainHeader .MainHeader-Nav .MainHeader-Menu a {
   text-decoration: none;
   color: #fff;
   width: 100%;
@@ -694,33 +694,33 @@ header.mainHeader .mainHeader-nav .mainHeader-menu a {
   -ms-flex-direction: column;
       flex-direction: column;
 }
-.tipResult li {
+.TipResult li {
   width: 90%;
   margin: 0 auto;
   text-align: left;
   line-height: 1.3em;
 }
-.pastTipsResult section {
+.PastTipsResult section {
   background: #fff;
   color: #333;
   line-height: 0em;
   padding: 1rem;
   margin-bottom: 1rem;
 }
-.pastTipsResult section h3 {
+.PastTipsResult section h3 {
   font-size: 2.2rem;
   line-height: 1.6rem;
 }
-.pastTipsResult section li {
+.PastTipsResult section li {
   line-height: 2.5rem;
 }
-.pastTipsResult section time {
+.PastTipsResult section time {
   font-size: 1.8rem;
 }
-.pnfHeader {
+.PnfHeader {
   margin-bottom: 2em;
 }
-.pnfHeader.pnfHeader_big {
+.PnfHeader.PnfHeader_big {
   font-size: 1.8em;
 }
 @keyframes fadein {

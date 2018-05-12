@@ -9,7 +9,7 @@ class About extends React.Component{
       <main>
         <Header />
 
-        <div className="about internal">
+        <div className="About internal">
 
           <h2>About <span>[ this magnificent app ]</span></h2>
 

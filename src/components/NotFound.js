@@ -6,7 +6,7 @@ class NotFound extends React.Component {
     return (
       <main>
         <Header />
-          <h2 className="pnfHeader pnfHeader_big">
+          <h2 className="PnfHeader PnfHeader_big">
             <span className="icon-directions"></span> 404 - Page Not Found!
           </h2>
           <p>Darn! You seem to be lost.</p>
