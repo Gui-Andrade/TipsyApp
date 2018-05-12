@@ -30,7 +30,7 @@ class PastTips extends React.Component{
 
           <h2>Saved Tips History</h2>
 
-          <div id="pastTipsResult">
+          <div className="pastTipsResult">
             {Object.keys(this.state.tips).map(key =>
               (<PastTip index={key} key={key} tipsData={this.state.tips[key]} />))
               }

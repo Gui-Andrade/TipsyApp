@@ -4,7 +4,7 @@ import { Link } from 'react-router';
 class Header extends React.Component{
 
   componentDidMount(){
-    const hamburger = document.querySelector('.nav-hamburger');
+    const hamburger = document.querySelector('.mainHeader-hamburger');
     const menu = document.querySelector('.mainHeader nav');
 
     hamburger.addEventListener('click', function(){
@@ -18,26 +18,26 @@ class Header extends React.Component{
     return (
       <header className="mainHeader">
 
-        <div className="nav-hamburger icon-menu"></div>
+        <div className="mainHeader-hamburger icon-menu"></div>
 
-        <nav>
-          <ul>
-            <li>
+        <nav className="mainHeader-nav">
+          <ul className="mainHeader-menu">
+            <li className="mainHeader-menu-item">
               <Link to="/about/">
                 <span className="icon-question"></span> About
               </Link>
             </li>
-            <li>
+            <li className="mainHeader-menu-item">
               <Link to="/">
                 <span className="icon-wallet"></span> Calculate
               </Link>
             </li>
-            <li>
+            <li className="mainHeader-menu-item">
               <Link to="/pasttips/">
                 <span className="icon-location-pin"></span> Past Tips
               </Link>
             </li>
-            <li>
+            <li className="mainHeader-menu-item">
               <Link to="/contact/">
                 <span className="icon-call-out"></span> Contact
               </Link>
@@ -52,7 +52,7 @@ class Header extends React.Component{
           </Link>
         </h1>
 
-        <h3 className="tagline">
+        <h3>
           Always pay and tip right
         </h3>
 

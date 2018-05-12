@@ -585,41 +585,41 @@ main {
 .internal {
   text-align: left;
 }
-#about,
-#contact {
+.about,
+.contact {
   background: #fff;
   color: #333;
   padding: 1rem;
 }
-#about blockquote,
-#contact blockquote {
+.about blockquote,
+.contact blockquote {
   font-size: 0.9em;
   display: block;
   margin-top: 1em;
   color: #808080;
 }
-#about h2,
-#contact h2 {
+.about h2,
+.contact h2 {
   font-size: 2.5rem;
 }
-#about h2 span,
-#contact h2 span {
+.about h2 span,
+.contact h2 span {
   display: inline;
   color: #a9a9a9;
 }
-#about span,
-#contact span {
+.about span,
+.contact span {
   font-style: italic;
   font-weight: bold;
   display: block;
   font-size: 0.8em;
 }
-#about p,
-#contact p {
+.about p,
+.contact p {
   font-size: 1em;
 }
-#about p span,
-#contact p span {
+.about p span,
+.contact p span {
   font-weight: normal;
   font-size: 1.2em;
   font-style: normal;
@@ -644,36 +644,26 @@ header.mainHeader h3 {
   position: relative;
   display: inline-block;
 }
-iframe {
-  width: 100%;
-  height: 25em;
-}
 header.mainHeader {
   padding-top: 2em;
   margin-bottom: 3em;
   position: relative;
 }
-header.mainHeader .nav-hamburger {
+header.mainHeader .mainHeader-hamburger {
   width: 1.4em;
   position: absolute;
   top: 2rem;
   right: 0;
   cursor: pointer;
 }
-header.mainHeader .nav-hamburger .hamb {
-  display: block;
-  width: 1.4em;
-  margin-bottom: 0.3em;
-  border-bottom: 3px solid #fff;
-}
-header.mainHeader nav {
+header.mainHeader .mainHeader-nav {
   animation: fadein 1.5s;
   display: none;
 }
-header.mainHeader nav.visible {
+header.mainHeader .mainHeader-nav.visible {
   display: block;
 }
-header.mainHeader nav ul {
+header.mainHeader .mainHeader-nav .mainHeader-menu {
   display: -ms-flexbox;
   display: flex;
   -ms-flex-direction: column;
@@ -681,7 +671,7 @@ header.mainHeader nav ul {
   margin: 0 0 5rem 0;
   padding: 0;
 }
-header.mainHeader nav ul li {
+header.mainHeader .mainHeader-nav .mainHeader-menu .mainHeader-menu-item {
   list-style: none;
   -ms-flex: 1;
       flex: 1;
@@ -691,7 +681,7 @@ header.mainHeader nav ul li {
   font-size: 1.2em;
   border-bottom: 1px solid #fff;
 }
-header.mainHeader nav ul a {
+header.mainHeader .mainHeader-nav .mainHeader-menu a {
   text-decoration: none;
   color: #fff;
   width: 100%;
@@ -704,33 +694,33 @@ header.mainHeader nav ul a {
   -ms-flex-direction: column;
       flex-direction: column;
 }
-#tipResult li {
+.tipResult li {
   width: 90%;
   margin: 0 auto;
   text-align: left;
   line-height: 1.3em;
 }
-#pastTipsResult section {
+.pastTipsResult section {
   background: #fff;
   color: #333;
   line-height: 0em;
   padding: 1rem;
   margin-bottom: 1rem;
 }
-#pastTipsResult section h3 {
+.pastTipsResult section h3 {
   font-size: 2.2rem;
   line-height: 1.6rem;
 }
-#pastTipsResult section li {
+.pastTipsResult section li {
   line-height: 2.5rem;
 }
-#pastTipsResult section time {
+.pastTipsResult section time {
   font-size: 1.8rem;
 }
-.pnf__header {
+.pnfHeader {
   margin-bottom: 2em;
 }
-.pnf__header.pnf__header-big {
+.pnfHeader.pnfHeader_big {
   font-size: 1.8em;
 }
 @keyframes fadein {
