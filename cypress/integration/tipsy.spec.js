@@ -1,0 +1,17 @@
+describe("test shared calculation", () => {
+  it("Tests shared bill functionality", () => {
+    cy.visit('https://tipsy.guiandrade.com')
+    cy.get('#shareOfBill')
+    .click()
+    cy.get('#billTotal')
+    .type('125')
+    cy.get('#billTip')
+    .type(10)
+    cy.get('#numberOfPeople')
+    .type(3)
+    cy.get('#tipSubmit')
+    .click()
+    cy.get('#totalToPayEach')
+    .should('contain', ' Total each: £45.83')
+  })
+})

@@ -7,6 +7,7 @@
     "babel-eslint": "^7.1.1",
     "babel-preset-env": "^1.7.0",
     "concurrently": "3.0.0",
+    "cypress": "^3.0.2",
     "eslint": "^3.19.0",
     "eslint-config-standard": "^11.0.0",
     "eslint-plugin-flowtype": "^2.46.3",
@@ -31,7 +32,8 @@
     "build": "react-scripts build",
     "eject": "react-scripts eject",
     "styles": "stylus -u autoprefixer-stylus ./src/css/style.styl -o ./src/css/style.css",
-    "styles:watch": "stylus -u autoprefixer-stylus -w ./src/css/style.styl -o ./src/css/style.css"
+    "styles:watch": "stylus -u autoprefixer-stylus -w ./src/css/style.styl -o ./src/css/style.css",
+    "cypress": "cypress open"
   },
   "eslintConfig": {
     "extends": "./node_modules/react-scripts/.eslintrc"
